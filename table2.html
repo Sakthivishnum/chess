@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style>
+            h1{
+                text-align: center;
+            }
+            
+            .chess-board{
+                margin-top: auto;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            .chess-board { border-spacing: 0; border-collapse: collapse; }
+            .chess-board th { padding: .5em; }
+            .chess-board th + th { border-bottom: 1px solid #000; }
+            .chess-board th:first-child,
+            .chess-board td:last-child { border-right: 1px solid #000; }
+            .chess-board tr:last-child td { border-bottom: 1px solid; }
+            .chess-board th:empty { border: none; }
+            .chess-board td { width: 2.3em; height: 2.3em; text-align: center; font-size: 32px; line-height: 0;}
+            .chess-board .light { background: #eee; }
+            .chess-board .dark { background: #130a0a; }
+            h1{
+                color: gray;
+            }
+            h3{
+                color: red;
+            }
+           div{
+        color: gray;
+    }
+    #myvideo{
+      position: relative; 
+      margin: auto;
+      min-width: 100vw;
+      min-height: 100vh;
+      z-index: -999;
+      position: fixed;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+        </style>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <video autoplay muted loop id="myvideo">
+            <source src="video.mp4" type="video/mp4">
+       </video>
+        <h1>Chess Board</h1>
+        <div class="moves">
+            <!--<h3>Moves of chess coin</h3>
+            <dl>
+                <dt>King</dt>
+                <dd>The King moves from its square to a neighboring square</dd>
+                <dt>Queen</dt>
+                <dd>the Queen may move like a Rook or a Bishop</dd>
+                <dt>Bishop</dt>
+                <dd>the Bishop moves diagonally</dd>
+                <dt>Rook</dt>
+                <dd>the Rook can move in its line or row</dd>
+                <dt>Knight</dt>
+                <dd>the Knight jumps in making the shortest move that is not a straight one</dd>
+                <dt>Pawn</dt>
+                <dd>the Pawn moves one square straight ahead</dd>
+            </dl>
+            </div>-->
+        <table class="chess-board">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>d</th>
+                    <th>e</th>
+                    <th>f</th>
+                    <th>g</th>
+                    <th>h</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td class="light">♜</td>
+                    <td class="dark">♞</td>
+                    <td class="light">♝</td>
+                    <td class="dark">♛</td>
+                    <td class="light">♚</td>
+                    <td class="dark">♝</td>
+                    <td class="light">♞</td>
+                    <td class="dark">♜</td>
+                    <th>8</th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td class="dark">♟</td>
+                    <td class="light">♟</td>
+                    <td class="dark">♟</td>
+                    <td class="light">♟</td>
+                    <td class="dark">♟</td>
+                    <td class="light">♟</td>
+                    <td class="dark">♟</td>
+                    <td class="light">♟</td>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <th>6</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <th>5</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <th>4</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <th>3</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td class="light">♙</td>
+                    <td class="dark">♙</td>
+                    <td class="light">♙</td>
+                    <td class="dark">♙</td>
+                    <td class="light">♙</td>
+                    <td class="dark">♙</td>
+                    <td class="light">♙</td>
+                    <td class="dark">♙</td>
+                    <th>2</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td class="dark">♖</td>
+                    <td class="light">♘</td>
+                    <td class="dark">♗</td>
+                    <td class="light">♕</td>
+                    <td class="dark">♔</td>
+                    <td class="light">♗</td>
+                    <td class="dark">♘</td>
+                    <td class="light">♖</td>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>d</th>
+                    <th>e</th>
+                    <th>f</th>
+                    <th>g</th>
+                    <th>h</th>
+                </tr>
+            </tbody>
+        </table>
+        
+            
+        
+    </body>

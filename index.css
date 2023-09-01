@@ -1,0 +1,22 @@
+/* body{
+       background-image: url(chess/black.jpg);
+      background-repeat: no-repeat;
+      background-size: cover; 
+} */
+
+.light:hover , .dark:hover{
+      transform: scale(1.2);
+      cursor: pointer;
+}
+/*.moves{
+        padding: 30px;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 400px;
+  margin-left: 1100px;
+}
+table{
+        
+}1*/
+
+
